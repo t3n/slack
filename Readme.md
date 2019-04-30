@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.com/t3n/slack.svg?branch=master)](https://travis-ci.com/t3n/slack)
+[![CircleCI](https://circleci.com/gh/t3n/slack.svg?style=svg)](https://circleci.com/gh/t3n/graphql) [![Latest Stable Version](https://poser.pugx.org/t3n/slack/v/stable)](https://packagist.org/packages/t3n/graphql) [![Total Downloads](https://poser.pugx.org/t3n/slack/downloads)](https://packagist.org/packages/t3n/graphql)
 
 # t3n.Slack
+
 Flow Package to send messages to Slack. This is package wraps the [maknz/slack](https://github.com/maknz/slack) library.
 
 Simply install the package via composer:
@@ -10,17 +11,18 @@ composer require "t3n/slack"
 ```
 
 ## Configuration
+
 In order to send messages to Slack you need to add an incoming WebHook to your Slack workspace. Read more about it here [https://api.slack.com/incoming-webhooks](https://api.slack.com/incoming-webhooks)
 
 As the incoming webhooks are treated as Slack Apps they are bound to a single channel. Therefore you can configure multiple "presets" to use several webhooks:
 
-````yaml
+```yaml
 t3n:
   Slack:
-    myPreset:   # you preset name
+    myPreset: # you preset name
       webhookUrl: 'https://hooks.slack.com/services/...'
-      clientSettings: []   # additional client configurations
-````
+      clientSettings: [] # additional client configurations
+```
 
 Read more about the possible client settings and options here: https://github.com/maknz/slack#settings
 
@@ -43,4 +45,3 @@ public function sendAMessage()
 
 If you create a message you need to pass the preset name. Check [maknz/slack documentation](https://github.com/maknz/slack#sending-messages) for all options that are
 available on the message object
-
