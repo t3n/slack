@@ -3,7 +3,7 @@
   "type": "neos-package",
   "name": "t3n/slack",
   "require": {
-    "neos/flow": "~5.2.0",
+    "neos/flow": "^5.2.0",
     "maknz/slack": "~1.7.0"
   },
   "require-dev": {
