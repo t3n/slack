@@ -19,9 +19,10 @@ As the incoming webhooks are treated as Slack Apps they are bound to a single ch
 ```yaml
 t3n:
   Slack:
-    myPreset: # you preset name
-      webhookUrl: 'https://hooks.slack.com/services/...'
-      clientSettings: [] # additional client configurations
+    configurations: 
+      myPreset: # you preset name
+        webhookUrl: 'https://hooks.slack.com/services/...'
+        clientSettings: [] # additional client configurations
 ```
 
 Read more about the possible client settings and options here: https://github.com/maknz/slack#settings
