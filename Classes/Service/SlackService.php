@@ -33,7 +33,7 @@ class SlackService
         }
 
         if (! array_key_exists($configuration, $this->configurations) || empty($this->configurations[$configuration]['webhookUrl'])) {
-            throw new InvalidConfigurationException('The configuration preset does not exist or musses a webhookUrl setting');
+            throw new InvalidConfigurationException('The configuration preset does not exist or misses a webhookUrl setting');
         }
 
         $selectedConfiguration = $this->configurations[$configuration];
