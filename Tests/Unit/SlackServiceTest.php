@@ -27,7 +27,7 @@ class SlackServiceTest extends UnitTestCase
         ]
     ];
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->slackService = new SlackService();
         $this->inject($this->slackService, 'configurations', $this->configurations);
